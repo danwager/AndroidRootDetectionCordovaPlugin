@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-  id="com.healthequity.rootdetector"
+  id="com.danwager.rootdetector"
   version="1.0.0">
 
     <name>RootDetectorPlugin</name>
@@ -17,11 +17,11 @@
 
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="RootDetectorPlugin"> 
-                <param name="android-package" value="com.healthequity.RootDetectorPlugin"/>
+            <feature name="RootDetectorPlugin">
+                <param name="android-package" value="com.danwager.RootDetectorPlugin"/>
             </feature>
         </config-file>
-        <source-file src="src/android/com/healthequity/RootDetectorPlugin.java" target-dir="src/com/healthequity" />        
+        <source-file src="src/android/com/RootDetectorPlugin.java" target-dir="src/com" />
     </platform>
 
 </plugin>
