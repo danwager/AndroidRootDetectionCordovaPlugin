@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+  id="com.healthequity.rootdetector"
+  version="1.0.0">
+
+    <name>RootDetectorPlugin</name>
+    <description>Detects whether an android device is rooted</description>
+    <author>Dan Wager</author>
+    <license>Apache 2.0 License</license>
+    <engines>
+        <engine name="cordova" version=">=2.9.0" />
+    </engines>
+    <js-module src="www/RootDetector.js" name="rootdetector">
+        <clobbers target="RootDetector" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="RootDetectorPlugin"> 
+                <param name="android-package" value="com.healthequity.RootDetectorPlugin"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/com/healthequity/RootDetectorPlugin.java" target-dir="src/com/healthequity" />        
+    </platform>
+
+</plugin>
